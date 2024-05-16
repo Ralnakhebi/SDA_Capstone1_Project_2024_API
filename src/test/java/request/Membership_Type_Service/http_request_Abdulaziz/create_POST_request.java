@@ -1,19 +1,19 @@
 package request.Membership_Type_Service.http_request_Abdulaziz;
 
-import base_urls.QuasparepartsBaseUrl;
+import CaptonAPI.BaseUrl.Create_Membership_types;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class create_POST_request extends QuasparepartsBaseUrl {
+public class create_POST_request extends Create_Membership_types {
 
     @Test
     public void Create_Membership_types() {
         //Set the Url
 
-        spec.pathParams("first", "membership-type");
+        spes.pathParams("first", "membership-type");
 
         //Set the expected data(Payload) --> Preparing expected data as String is not recommended. Because we can not extract specific field from String body for assertion.
 
@@ -24,7 +24,7 @@ public class create_POST_request extends QuasparepartsBaseUrl {
                 }""";
 
 
-        Response response = given(spec)
+        Response response = given(spes)
                 .body(payload)
                 .when()
                 .post("{first}");

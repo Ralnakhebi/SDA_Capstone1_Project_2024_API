@@ -1,23 +1,23 @@
 package request.Membership_Type_Service.http_request_Abdulaziz;
 
-import base_urls.QuasparepartsBaseUrl;
+import CaptonAPI.BaseUrl.Create_Membership_types;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class GET_company_membership extends QuasparepartsBaseUrl {
+public class GET_company_membership extends Create_Membership_types {
 
     @Test
     public void User_Get_Company_Memberships_to_verify_company_membership() {
 
         // Set Url
-        spec.pathParams("first", "membership-type");
+        spes.pathParams("first", "membership-type");
 
 
         // Send Request and get response
-        Response response = given(spec).when().get("{first}");
+        Response response = given(spes).when().get("{first}");
         response.prettyPrint();
         // Do assertions
         response
