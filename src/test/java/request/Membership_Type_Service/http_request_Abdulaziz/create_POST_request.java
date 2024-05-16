@@ -11,12 +11,11 @@ public class create_POST_request extends QuasparepartsBaseUrl {
 
     @Test
     public void Create_Membership_types() {
-        //Set the Url
 
+        //Set the Url
         spec.pathParams("first", "membership-type");
 
         //Set the expected data(Payload) --> Preparing expected data as String is not recommended. Because we can not extract specific field from String body for assertion.
-
         String payload = """
                 {
                     "name": "NewCompany abdulaziz",

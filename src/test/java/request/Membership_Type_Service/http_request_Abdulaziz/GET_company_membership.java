@@ -19,6 +19,7 @@ public class GET_company_membership extends QuasparepartsBaseUrl {
         // Send Request and get response
         Response response = given(spec).when().get("{first}");
         response.prettyPrint();
+
         // Do assertions
         response
                 .then()
