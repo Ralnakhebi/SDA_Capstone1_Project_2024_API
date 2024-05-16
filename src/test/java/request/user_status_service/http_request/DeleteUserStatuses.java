@@ -1,2 +1,4 @@
-package request.user_status_service;public class DeleteUserStatuses {
+package request.user_status_service.http_request;
+
+public class DeleteUserStatuses {
 }

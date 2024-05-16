@@ -1,2 +1,7 @@
-package request.user_status_service;public class GetAllUserStatuses {
+package request.user_status_service.http_request;
+
+public class GetUserStatuses {
+
+
+
 }
