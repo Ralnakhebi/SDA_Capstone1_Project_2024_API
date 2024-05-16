@@ -1,19 +1,19 @@
 package request.Membership_Type_Service.http_request_Abdulaziz;
 
-import CaptonAPI.BaseUrl.Create_Membership_types;
+import base_urls.QuasparepartsBaseUrl;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class PUT_membership extends Create_Membership_types {
+public class PUT_membership extends QuasparepartsBaseUrl {
 
     @Test
     public void User_Get_Company_Memberships_to_verify_Guest_membership() {
 
         // Set Url
-        spes.pathParams("first", "membership-type");
+        spec.pathParams("first", "membership-type");
 
         String payloadstr = """
                 {
@@ -22,7 +22,7 @@ public class PUT_membership extends Create_Membership_types {
                 }""";
 
 
-        Response response = given(spes).body(payloadstr).when().put("{first}");
+        Response response = given(spec).body(payloadstr).when().put("{first}");
         response.prettyPrint();
 
         //do assertion

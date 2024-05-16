@@ -1,6 +1,6 @@
 package request.Membership_Type_Service.http_request_Abdulaziz;
 
-import CaptonAPI.BaseUrl.Create_Membership_types;
+import base_urls.QuasparepartsBaseUrl;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -8,17 +8,17 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasItems;
 
-public class GET_request_All extends Create_Membership_types {
+public class GET_request_All extends QuasparepartsBaseUrl {
 
     @Test
     public void GET_All_membership_types() {
         //Set the Url
 
-        spes.pathParams("first", "membership-type");
+        spec.pathParams("first", "membership-type");
 
 
         // Send Request and get response
-        Response response = given(spes).when().get("{first}");
+        Response response = given(spec).when().get("{first}");
         response.prettyPrint();
         // Do assertions
         response

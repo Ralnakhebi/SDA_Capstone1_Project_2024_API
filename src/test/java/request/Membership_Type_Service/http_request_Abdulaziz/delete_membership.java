@@ -1,22 +1,22 @@
 package request.Membership_Type_Service.http_request_Abdulaziz;
 
-import CaptonAPI.BaseUrl.Create_Membership_types;
+import base_urls.QuasparepartsBaseUrl;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class delete_membership extends Create_Membership_types {
+public class delete_membership extends QuasparepartsBaseUrl {
 
     @Test
     public void DELETE_Membership_types() {
 
         // Set Url
-        spes.pathParams("first", "membership-type", "second", 6);
+        spec.pathParams("first", "membership-type", "second", 6);
 
 
-        Response response = given(spes).when().delete("{first}/{second}");
+        Response response = given(spec).when().delete("{first}/{second}");
         response.prettyPrint();
 
         //do assertion
