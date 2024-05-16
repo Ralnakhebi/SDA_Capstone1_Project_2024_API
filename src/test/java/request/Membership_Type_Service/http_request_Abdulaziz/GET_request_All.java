@@ -1,4 +1,4 @@
-package request.Membership_Type_Service.http_request;
+package request.Membership_Type_Service.http_request_Abdulaziz;
 
 import base_urls.QuasparepartsBaseUrl;
 import io.restassured.response.Response;
@@ -20,6 +20,7 @@ public class GET_request_All extends QuasparepartsBaseUrl {
         // Send Request and get response
         Response response = given(spec).when().get("{first}");
         response.prettyPrint();
+
         // Do assertions
         response
                 .then()

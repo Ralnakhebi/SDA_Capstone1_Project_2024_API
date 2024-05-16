@@ -1,4 +1,4 @@
-package request.Membership_Type_Service.http_request;
+package request.Membership_Type_Service.http_request_Abdulaziz;
 
 import base_urls.QuasparepartsBaseUrl;
 import io.restassured.response.Response;
