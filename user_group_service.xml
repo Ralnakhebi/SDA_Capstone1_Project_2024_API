@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Msqx7/IdeaProjects/SDA_Capstone1_Project_2024_API">
+        <classes>
+            <class name="request.user_group_service.http_request.CreateUserGroup"></class>
+            <class name="request.user_group_service.http_request.GetUserGroup"></class>
+            <class name="request.user_group_service.http_request.UpdateUserGroup"></class>
+            <class name="request.user_group_service.http_request.DeleteUserGroup"></class>
+        </classes>
+    </test>
+</suite>

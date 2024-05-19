@@ -16,7 +16,11 @@ public class Authentication {
         driver.findElement(By.linkText("Login")).click();
         driver.findElement(By.id("username")).sendKeys("dsdt2004@gmail.com");
         driver.findElement(By.id("password")).sendKeys("IQJe8N4QkMruFHc");
-        driver.findElement(By.tagName("button")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
         return driver.manage().getCookieNamed("GSESSIONID").getValue();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getSessionId());
     }
 }
