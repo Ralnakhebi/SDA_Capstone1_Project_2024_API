@@ -53,7 +53,7 @@ public class GetUserGroup extends QuasparepartsBaseUrl2 {
 
 
         //Send the request and get the response
-        Response response = given(spec).when().get("user-group/"+userGroupId);
+        Response response = given(spec).when().get("user-group/" + userGroupId);
         response.prettyPrint();
 
 
