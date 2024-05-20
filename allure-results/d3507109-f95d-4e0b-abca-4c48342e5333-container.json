@@ -1,0 +1,1 @@
+{"uuid":"d3507109-f95d-4e0b-abca-4c48342e5333","name":"All Test Suite","children":["00b9d6f9-51aa-461e-94c5-8df434a6adb9"],"befores":[{"name":"connectApp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1716191138074,"stop":1716191146678}],"afters":[],"start":1716191138059,"stop":1716191151445}
