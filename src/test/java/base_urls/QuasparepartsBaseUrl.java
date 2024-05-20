@@ -3,6 +3,8 @@ package base_urls;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import static utilities.Authentication.getSessionId;
 
@@ -19,7 +21,6 @@ public class QuasparepartsBaseUrl {
                 .addHeader("Cookie", "GSESSIONID=" + getSessionId())
                 .build();
 
+        }
     }
-
-
-}
+    
