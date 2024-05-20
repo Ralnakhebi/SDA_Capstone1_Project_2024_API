@@ -50,7 +50,7 @@ public class CreateUserGroup extends QuasparepartsBaseUrl2 {
         userGroupId = actualData.getId();
         System.out.println("userGroupId = " + userGroupId);
 
-        orgId=actualData.getOrganization_id();
+        orgId = actualData.getOrganization_id();
         System.out.println("orgId = " + orgId);
 
     }
