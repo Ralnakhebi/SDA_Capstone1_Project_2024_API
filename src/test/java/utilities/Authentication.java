@@ -14,8 +14,8 @@ public class Authentication {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://qa-gm3.quaspareparts.com/");
         driver.findElement(By.linkText("Login")).click();
-        driver.findElement(By.id("username")).sendKeys("dsdt2004@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("IQJe8N4QkMruFHc");
+        driver.findElement(By.id("username")).sendKeys("sda2024@gmail.com");
+        driver.findElement(By.id("password")).sendKeys("2JDTWt4UWdjGcNv");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         return driver.manage().getCookieNamed("GSESSIONID").getValue();
     }

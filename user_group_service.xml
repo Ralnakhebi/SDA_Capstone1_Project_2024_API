@@ -7,6 +7,7 @@
             <class name="request.user_group_service.http_request.GetUserGroup"></class>
             <class name="request.user_group_service.http_request.UpdateUserGroup"></class>
             <class name="request.user_group_service.http_request.DeleteUserGroup"></class>
+            <class name="request.user_group_service.http_request.DeleteUserGroupVerify"></class>
         </classes>
     </test>
 </suite>
