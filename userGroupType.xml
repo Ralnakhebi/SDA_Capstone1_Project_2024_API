@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <test verbose="2" preserve-order="true" name="Running a package Test">
+
+         <classes>
+             <class name="request.user_group_type_service.http_request.GetAllUserGroupType">
+                 <methods>
+                     <include name="getAllUserGroupType"/>
+                 </methods>
+             </class>
+
+             <class name="request.user_group_type_service.http_request.AddUserGroupType">
+                 <methods>
+                     <include name="AddNewUserGroupType"/>
+                 </methods>
+             </class>
+
+             <class name="request.user_group_type_service.http_request.PutUserGroupType">
+                 <methods>
+                     <include name="putUserGroupType"/>
+                 </methods>
+             </class>
+             <class name="request.user_group_type_service.http_request.GetUserGroupTypeById">
+                 <methods>
+                     <include name="GetUserGroupById"/>
+                 </methods>
+             </class>
+             <class name="request.user_group_type_service.http_request.DeleteUserGroupTypeById">
+                 <methods>
+                     <include name="deleteUserGroupTypeByIdTest"/>
+                 </methods>
+             </class>
+
+             <class name="request.user_group_type_service.http_request.AddUserGroupTypeWithoutName">
+                 <methods>
+                     <include name="AddNewUserGroupTypeWithoutName"/>
+                 </methods>
+             </class>
+             <class name="request.user_group_type_service.http_request.GetNonExistingUserGroupType">
+                 <methods>
+                     <include name="GetNonExistingUserGroupTypeById"/>
+                 </methods>
+             </class>
+
+         </classes>
+
+    </test>
+</suite>
