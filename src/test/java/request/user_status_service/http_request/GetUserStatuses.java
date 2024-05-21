@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import request.user_status_service.pojo.UserStatusPojo;
 
 import java.io.*;
+import java.util.List;
 
 import static base_urls.QuasparepartsBaseUrl.spec;
 import static io.restassured.RestAssured.given;
@@ -16,7 +17,7 @@ public class GetUserStatuses {
     /************************************************
      *             Get All User Statuses            *
      ************************************************/
-    @Test(description = "To verify that all user statuses can be fetched")
+    @Test(description = "To verify that all user statuses can be fetched",priority = -1)
     public void testCase1(){
         // Set Url
         spec.pathParam("first","user-status");
@@ -25,6 +26,9 @@ public class GetUserStatuses {
 
         // Send Request and Get Response
         Response response = given(spec).when().get("{first}");
+        //Set ID form exist Ids to use in GET, PUT and DELETE Request
+        List<Integer> ids=response.jsonPath().getList("id");
+        writeUserStatusIdToFile(ids.get(0));
         response.prettyPrint();
 
         //---------------------------------------------------
@@ -44,7 +48,7 @@ public class GetUserStatuses {
     @Test(description = "To verify that user status can be fetched by id")
     public void testCase3(){
         // Set Url
-        Integer userStatusesId =readUserStatusIdToFile();
+        Integer userStatusesId =readUserStatusIdFromFile();
         System.out.println("userStatusesId = " + userStatusesId);
         spec.pathParams("first","user-status","second",userStatusesId);
 
@@ -53,8 +57,8 @@ public class GetUserStatuses {
         //Set Expected Data
         String payloadStr= """
                 {
-                    "name": "Deactivated",
-                    "description": "User account is deactivated, and not authorized to access any the application"
+                    "name": "Active",
+                    "description": "User account is activated and authorized to use the application"
                 }""";
 
         // Convert String to Pojo Class Using ObjectMapper
@@ -83,7 +87,7 @@ public class GetUserStatuses {
     @Test(description = "To verify that non-existing user status cannot be fetched",dependsOnMethods = {"request.user_status_service.http_request.DeleteUserStatuses.testCase5"})
     public void testCase7(){
         // Set Url
-        Integer userStatusesId =readUserStatusIdToFile();
+        Integer userStatusesId =readUserStatusIdFromFile();
         System.out.println("userStatusesId = " + userStatusesId);
         spec.pathParams("first","user-status","second",userStatusesId);
 
@@ -113,7 +117,7 @@ public class GetUserStatuses {
         Assert.assertTrue(response.asString().isEmpty());
 
     }
-    public static Integer readUserStatusIdToFile(){
+    public static Integer readUserStatusIdFromFile(){
         String separator = System.getProperty("file.separator");
         String fileName = System.getProperty("user.dir")+separator+"src"+separator+
                 "test"+separator+"java"+separator+"request"+separator+"user_status_service"+
@@ -129,6 +133,19 @@ public class GetUserStatuses {
             e.printStackTrace();
         }
         return Integer.parseInt(line);
+    }
+    public void writeUserStatusIdToFile(Integer userStatusId){
+        String separator = System.getProperty("file.separator");
+        String fileName = System.getProperty("user.dir")+separator+"src"+separator+
+                "test"+separator+"java"+separator+"request"+separator+"user_status_service"+
+                separator+"pojo"+separator+"UserStatusId.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write(userStatusId+"");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 

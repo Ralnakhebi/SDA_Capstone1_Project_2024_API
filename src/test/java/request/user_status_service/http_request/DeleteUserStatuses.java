@@ -15,10 +15,10 @@ public class DeleteUserStatuses {
     /************************************************
      *      Delete Existing User Status by ID       *
      ************************************************/
-    @Test(description = "To verify that existing user status can be deleted by Id")
+    @Test(description = "To verify that existing user status can be deleted by Id",priority = 1)
     public void testCase5() {
         // Set Url
-        Integer userStatusesId = GetUserStatuses.readUserStatusIdToFile();
+        Integer userStatusesId = GetUserStatuses.readUserStatusIdFromFile();
         System.out.println("userStatusesId = " + userStatusesId);
         spec.pathParams("first", "user-status", "second", userStatusesId);
 
@@ -45,7 +45,7 @@ public class DeleteUserStatuses {
     @Test(description = "To verify that existing user status can be deleted by Id",dependsOnMethods = {"request.user_status_service.http_request.DeleteUserStatuses.testCase5"})
     public void testCase8() {
         // Set Url
-        Integer userStatusesId = GetUserStatuses.readUserStatusIdToFile();
+        Integer userStatusesId = GetUserStatuses.readUserStatusIdFromFile();
         System.out.println("userStatusesId = " + userStatusesId);
         spec.pathParams("first", "user-status", "second", userStatusesId);
 

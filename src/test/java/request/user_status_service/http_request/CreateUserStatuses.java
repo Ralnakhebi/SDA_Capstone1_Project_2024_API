@@ -20,7 +20,6 @@ import static utilities.ObjectMapperUtilities.convertJsonToJava;
 
 public class CreateUserStatuses {
 
-    public static UserStatusPojo payload=null;
 
     /************************************************
      *             Add New User Status              *
@@ -38,7 +37,7 @@ public class CreateUserStatuses {
                 }""";
 
         // Convert String to Pojo Class Using ObjectMapper
-        payload =convertJsonToJava(payloadStr, UserStatusPojo.class);
+        UserStatusPojo payload =convertJsonToJava(payloadStr, UserStatusPojo.class);
 
         //---------------------------------------------------
 
@@ -53,7 +52,7 @@ public class CreateUserStatuses {
 
         // Do the assertion
 
-        // Status Code should be 200
+        // Status Code should be 201
         response.then().statusCode(201);
         // The Name is "Deactivated"
         Assert.assertEquals(actualData.getName(),payload.getName());
