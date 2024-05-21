@@ -16,13 +16,14 @@ public class UpdateUserStatuses {
     @Test(description = "To verify that the user status can be updated using an existing Id")
     public void testCase4(){
         // Set Url
+
         spec.pathParam("first","user-status");
 
         //---------------------------------------------------
 
         //Set Expected Data
         String payloadStr= "{\n" +
-                "    \"id\": "+GetUserStatuses.readUserStatusIdToFile()+",\n" +
+                "    \"id\": "+GetUserStatuses.readUserStatusIdFromFile()+",\n" +
                 "    \"name\": \"Deactivated\",\n" +
                 "    \"description\": \"User account is deactivated, and not authorized to access any the application TEST\"\n" +
                 "}";
@@ -57,7 +58,7 @@ public class UpdateUserStatuses {
 
         //Set Expected Data
         String payloadStr= "{\n" +
-                "    \"id\": "+GetUserStatuses.readUserStatusIdToFile()+",\n" +
+                "    \"id\": "+GetUserStatuses.readUserStatusIdFromFile()+",\n" +
                 "    \"name\": \"Deactivated\",\n" +
                 "    \"description\": \"User account is deactivated, and not authorized to access any the application TEST\"\n" +
                 "}";

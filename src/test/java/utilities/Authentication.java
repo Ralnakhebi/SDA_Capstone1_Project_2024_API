@@ -9,6 +9,7 @@ import java.time.Duration;
 
 public class Authentication {
 
+
     public static String getSessionId(){
 
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--headless"));
@@ -16,10 +17,7 @@ public class Authentication {
         driver.get("https://qa-gm3.quaspareparts.com/");
         driver.findElement(By.linkText("Login")).click();
         driver.findElement(By.id("username")).sendKeys("sda2024@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("2JDTWt4UWdjGcNv");
-
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-
+        driver.findElement(By.id("password")).sendKeys("_AiQRr-zPWbggDa");
         driver.findElement(By.tagName("button")).click();
 
         return driver.manage().getCookieNamed("GSESSIONID").getValue();
@@ -27,10 +25,8 @@ public class Authentication {
     }
 
 
-
     public static void main(String[] args) {
-        System.out.println("getSessionId() = " + getSessionId());
+        System.out.println(getSessionId());
     }
-
 
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="src/test/java/request/user_service/http_request">
+        <classes>
+            <class name="request.user_service.http_request.GetUser"></class>
+            <class name="request.user_service.http_request.CreateUser"></class>
+            <class name="request.user_service.http_request.UpdateUser"></class>
+            <class name="request.user_service.http_request.DeleteUser"></class>
+        </classes>
+    </test>
+</suite>
