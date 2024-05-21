@@ -1,1 +1,0 @@
-{"uuid":"426aead4-197e-4b56-9218-5077dcc4fe62","name":"Default Suite","children":["b575a094-5bda-4f75-a48f-260b4ee01110"],"befores":[{"name":"connectApp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1716201477229,"stop":1716201492602}],"afters":[],"start":1716201477185,"stop":1716201512924}
