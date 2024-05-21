@@ -1,4 +1,4 @@
-package Country_Service.http_request;
+package request.Country_Service.http_request;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
