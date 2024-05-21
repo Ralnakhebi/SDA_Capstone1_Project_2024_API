@@ -11,6 +11,7 @@ public class Authentication {
 
 
     public static String getSessionId(){
+
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--headless"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://qa-gm3.quaspareparts.com/");
@@ -18,6 +19,12 @@ public class Authentication {
         driver.findElement(By.id("username")).sendKeys("sda2024@gmail.com");
         driver.findElement(By.id("password")).sendKeys("2JDTWt4UWdjGcNv");
         driver.findElement(By.tagName("button")).click();
+
         return driver.manage().getCookieNamed("GSESSIONID").getValue();
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getSessionId());
     }
 }
