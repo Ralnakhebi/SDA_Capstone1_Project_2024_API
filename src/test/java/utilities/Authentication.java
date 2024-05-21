@@ -18,8 +18,17 @@ public class Authentication {
         driver.findElement(By.id("username")).sendKeys("sda2024@gmail.com");
         driver.findElement(By.id("password")).sendKeys("2JDTWt4UWdjGcNv");
         driver.findElement(By.tagName("button")).click();
+
         return driver.manage().getCookieNamed("GSESSIONID").getValue();
 
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getSessionId());
+    }
+
+    public static void main(String[] args) {
+        System.out.println("getSessionId() = " + getSessionId());
     }
 
     public static void main(String[] args) {
