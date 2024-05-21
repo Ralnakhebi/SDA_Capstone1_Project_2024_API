@@ -9,6 +9,7 @@ import java.time.Duration;
 
 public class Authentication {
 
+
     public static String getSessionId(){
 
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--headless"));
