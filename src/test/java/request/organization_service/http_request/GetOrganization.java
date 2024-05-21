@@ -21,6 +21,7 @@ import static org.testng.Assert.assertEquals;
 public class GetOrganization {
 
 
+
     @Test(description = "GetOrganizationByApplication")
     void TC01() {
         spec.pathParams("1", "application", "2", "2", "3", "organization");
@@ -49,6 +50,7 @@ public class GetOrganization {
             }
         }
     }
+
 
         @Test(description = "getOrganizationById")
         public void TC02 () {
