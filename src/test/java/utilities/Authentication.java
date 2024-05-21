@@ -26,15 +26,11 @@ public class Authentication {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(getSessionId());
-    }
+
 
     public static void main(String[] args) {
         System.out.println("getSessionId() = " + getSessionId());
     }
 
-    public static void main(String[] args) {
-        System.out.println(getSessionId());
-    }
+
 }

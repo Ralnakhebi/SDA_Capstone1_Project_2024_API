@@ -23,15 +23,15 @@ public class GetOrganization {
 
     @Test(description = "GetOrganizationByApplication")
     void TC01() {
-        spec.pathParams("1", "application", "2", "2", "3", "organization");
+        spec.pathParams("first", "application", "second", "2", "third", "organization");
 
         Response response = given(spec)
                 .when()
-                .get("{1}/{2}/{3}") // Replace with your endpoint
+                .get("{first}/{second}/{third}")
                 .then()
                 .extract()
                 .response();
-        response.prettyPrint();
+       // response.prettyPrint();
         // Assert response status code
         assertEquals(200, response.statusCode());
         List<Map<String, Object>> data = response.jsonPath().getList("");
@@ -57,7 +57,7 @@ public class GetOrganization {
 
             Response response = given(spec)
                     .get("{first}/{2}");
-            response.prettyPrint();
+           // response.prettyPrint();
             assertEquals(response.getStatusCode(), 200);
             Assert.assertEquals("Team1Company", response.jsonPath().getString("name"));
             Assert.assertEquals("29", response.jsonPath().getString("founder_id"));

@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/mr-sh/IdeaProjects/SDA_Capstone1_Project_2024_API/src/test/java/request/organization_service/http_request">
         <classes>
+
             <class name="request.organization_service.http_request.CreateOrganization">
                 <methods>
                     <include name="TC03"/>
@@ -11,6 +12,7 @@
                     <include name="TC05"/>
                 </methods>
             </class>
+
 
             <class name="request.organization_service.http_request.UpdateOrganization">
                 <methods>
@@ -23,6 +25,10 @@
                     <include name="TC07"/>
                 </methods>
             </class>
+
+
+
+
         </classes>
     </test>
 </suite>
