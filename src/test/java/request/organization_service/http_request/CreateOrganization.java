@@ -15,10 +15,11 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class CreateOrganization {
 
-
+    /************************************************
+     *             Add New Organization               *
+     ************************************************/
     @Test(description = "createOrganization")
     public void  TC03() {
-
 
         spec.pathParam("first", "organization");
 
@@ -34,15 +35,11 @@ public class CreateOrganization {
         requestBody.put("fax", "966131313131311");
         requestBody.put("status_id", 1);
         requestBody.put("currency", "SAR");
-
         // Send the request and get the response
         Response response = given(spec)
                 .body(requestBody)
                 .when()
                 .post("{first}");
-
-        response.prettyPrint();
-
         // Save the organization ID from the response
         writeOrganizationIdToFile( response.jsonPath().getLong("id"));
 
@@ -57,7 +54,6 @@ public class CreateOrganization {
         Assert.assertEquals("www.Team1Company.com",response.jsonPath().getString("website"));
         Assert.assertEquals("1",response.jsonPath().getString("status_id"));
         Assert.assertEquals("SAR",response.jsonPath().getString("currency"));
-
 
     }
 
