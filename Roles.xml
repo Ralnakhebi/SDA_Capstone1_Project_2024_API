@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/hp-pc/IdeaProjects/SDA_Capstone1_Project_2024_API/src/test/java/request/Role_Service">
+        <classes>
+            <class name="request.Role_Service.Get_All_Roles">
+                <methods>
+                    <include name="get_All_Roles_by_Organization"/>
+                    <include name="get_All_Roles_by_Application"/>
+                    <include name="get_All_Roles_of_The_Subscription"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
